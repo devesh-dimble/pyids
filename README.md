@@ -14,7 +14,7 @@ Export the data to clean JSON format.
 
 Automate batch processing of multiple IDS files.
 
-📦 Installation
+## 📦 Installation
 
  Clone the repo and install dependencies:
  
@@ -34,7 +34,7 @@ Automate batch processing of multiple IDS files.
  pyids
   – local parsing and conversion functions
 
-🚀 Usage
+## 🚀 Usage
  1. Convert a single IDS file
  
  Use quick_run.py to parse an IDS and dump it as JSON:
@@ -92,7 +92,7 @@ Automate batch processing of multiple IDS files.
  
  print("✅ dumped IDS_demo_BIM-basis-ILS.json")
 
-🛠 Project Structure
+## 🛠 Project Structure
  .
  ├───.pytest_cache
  │   └───v
