@@ -24,7 +24,7 @@ from pyids import readIDS, toPydantic
 from pathlib import Path
 
 # Input file
-var = "ids_files/IDS_demo_BIM-basis-ILS.ids"
+var = "ids_files/IDS_demo_BIM-basis-ILS.ids" # can change to any .ids file path
 
 # Extract the stem (filename without extension)
 input_path = Path(var)
