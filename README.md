@@ -104,3 +104,18 @@ Automate batch processing of multiple IDS files.
  │   └───pyids.egg-info
  └───tests
      └───__pycache__
+
+
+## ⚠️ Notes & Caveats
+
+Different IDS files may have slightly different nesting/attribute styles (e.g. @cardinality, xs:restriction, lists vs strings).
+
+The provided Pydantic models are flexible (Union[str, List[str]], etc.) but may still require tweaks for exotic IDS structures.
+
+JSON output aims to mirror the original IDS content, so it can look verbose or “messy”. This is expected and keeps fidelity to the source.
+
+## 📖 References
+
+https://technical.buildingsmart.org/ids-software-implementations/
+https://github.com/buildingSMART/IDS/tree/development/Documentation/Examples
+
