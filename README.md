@@ -35,7 +35,7 @@ Automate batch processing of multiple IDS files.
   – local parsing and conversion functions
 
 ## 🚀 Usage
- 1. Convert a single IDS file
+### 1. Convert a single IDS file
  
   Use quick_run.py to parse an IDS and dump it as JSON:
   
@@ -62,7 +62,7 @@ Automate batch processing of multiple IDS files.
   
   IDS_demo_BIM-basis-ILS.json
   
- 2. Bulk convert all IDS files
+ ### 2. Bulk convert all IDS files
  
   You can loop over all .ids files in a folder and export them:
   
@@ -79,7 +79,7 @@ Automate batch processing of multiple IDS files.
       Path(output_filename).write_text(model.model_dump_json(indent=2), encoding="utf-8")
       print(f"✅ Saved {output_filename}")
   
- 3. Validate IDS and convert with ifctester
+ ### 3. Validate IDS and convert with ifctester
  
   For raw conversion (without Pydantic), use save_ids.py:
   
