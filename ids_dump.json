@@ -1,0 +1,90 @@
+{
+  "@xmlns": "http://standards.buildingsmart.org/IDS",
+  "@xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+  "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+  "@xsi:schemaLocation": "http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd",
+  "info": {
+    "title": "buildingSMART Sample IDS",
+    "copyright": "buildingSMART",
+    "version": "1.0.0",
+    "description": "These are example specifications for those learning how to use IDS",
+    "author": "foo@bar.com",
+    "date": "2022-01-01",
+    "purpose": "Contractual requirements"
+  },
+  "specifications": {
+    "specification": [
+      {
+        "@name": "Project naming",
+        "@ifcVersion": [
+          "IFC4"
+        ],
+        "applicability": {
+          "entity": [
+            {
+              "name": {
+                "simpleValue": "IFCPROJECT"
+              }
+            }
+          ],
+          "@minOccurs": 0,
+          "@maxOccurs": "unbounded"
+        },
+        "requirements": {
+          "attribute": [
+            {
+              "name": {
+                "simpleValue": "Name"
+              },
+              "value": {
+                "simpleValue": "TEST"
+              },
+              "@cardinality": "required",
+              "@instructions": "The project manager shall confirm the short project code with the client based on their real estate portfolio naming scheme."
+            }
+          ]
+        },
+        "@description": "Projects shall be named correctly for the purposes of identification, project archival, and model federation.",
+        "@instructions": "Each discipline is responsible for naming their own project."
+      },
+      {
+        "@name": "Fire rating",
+        "@ifcVersion": [
+          "IFC4"
+        ],
+        "applicability": {
+          "entity": [
+            {
+              "name": {
+                "simpleValue": "IFCWALLTYPE"
+              }
+            }
+          ],
+          "@minOccurs": 0,
+          "@maxOccurs": "unbounded"
+        },
+        "requirements": {
+          "property": [
+            {
+              "propertySet": {
+                "simpleValue": "Pset_WallCommon"
+              },
+              "baseName": {
+                "simpleValue": "IsExternal"
+              },
+              "value": {
+                "simpleValue": "TRUE"
+              },
+              "@dataType": "IFCBOOLEAN",
+              "@uri": "https://identifier.buildingsmart.org/uri/.../prop/LoadBearing",
+              "@cardinality": "required",
+              "@instructions": "Walls need to be load bearing."
+            }
+          ]
+        },
+        "@description": "All objects must have a fire rating for building compliance checks and to know the protection strategies needed for any penetrations.",
+        "@instructions": "The architect is responsible for including this data."
+      }
+    ]
+  }
+}

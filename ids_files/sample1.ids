@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+    <info>
+        <title>buildingSMART Sample IDS</title>
+        <copyright>buildingSMART</copyright>
+        <version>1.0.0</version>
+        <description>These are example specifications for those learning how to use IDS</description>
+        <author>foo@bar.com</author>
+        <date>2022-01-01</date>
+        <purpose>Contractual requirements</purpose>
+    </info>
+    <specifications>
+        <specification name="Project naming" ifcVersion="IFC4" description="Projects shall be named correctly for the purposes of identification, project archival, and model federation." instructions="Each discipline is responsible for naming their own project.">
+            <applicability minOccurs="0" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCPROJECT</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <attribute cardinality="required" instructions="The project manager shall confirm the short project code with the client based on their real estate portfolio naming scheme.">
+                    <name>
+                        <simpleValue>Name</simpleValue>
+                    </name>
+                    <value>
+                        <simpleValue>TEST</simpleValue>
+                    </value>
+                </attribute>
+            </requirements>
+        </specification>
+        <specification name="Fire rating" ifcVersion="IFC4" description="All objects must have a fire rating for building compliance checks and to know the protection strategies needed for any penetrations." instructions="The architect is responsible for including this data.">
+            <applicability minOccurs="0" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCWALLTYPE</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <property dataType="IFCBOOLEAN" uri="https://identifier.buildingsmart.org/uri/.../prop/LoadBearing" cardinality="required" instructions="Walls need to be load bearing.">
+                    <propertySet>
+                        <simpleValue>Pset_WallCommon</simpleValue>
+                    </propertySet>
+                    <baseName>
+                        <simpleValue>IsExternal</simpleValue>
+                    </baseName>
+                    <value>
+                        <simpleValue>TRUE</simpleValue>
+                    </value>
+                </property>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

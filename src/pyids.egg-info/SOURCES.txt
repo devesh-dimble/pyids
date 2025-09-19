@@ -1,0 +1,10 @@
+pyproject.toml
+src/pyids/__init__.py
+src/pyids/core.py
+src/pyids/models.py
+src/pyids.egg-info/PKG-INFO
+src/pyids.egg-info/SOURCES.txt
+src/pyids.egg-info/dependency_links.txt
+src/pyids.egg-info/requires.txt
+src/pyids.egg-info/top_level.txt
+tests/test_core.py
