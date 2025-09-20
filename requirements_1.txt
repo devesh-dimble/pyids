@@ -1,3 +1,0 @@
-ifctester==0.8.3
-pydantic==2.11.9
-xmlschema==4.1.0
